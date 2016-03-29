@@ -1,5 +1,6 @@
 <?php
-
+///// ПРОБНЫЕ ИЗМЕНЕНИЯ С ПРИМЕНЕНИЕМ GIT BASH
+//// И КОМАНДНОЙ СТРОКИ ЧЕРЕЗ BASH КОНСОЛЬ В PHP-STORM
 
 class SessionsRep
 {
