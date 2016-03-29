@@ -32,8 +32,8 @@ class Db{
     public function fetch($sql){
         try {
             $res = $this->query($sql);
-			echo var_dump($res);
-            //return $res->fetch_all(MYSQLI_ASSOC);
+			//echo var_dump($res);
+            return $res->fetch_all(MYSQLI_ASSOC);
         } catch (Exception $e) {
             return false;
         }
