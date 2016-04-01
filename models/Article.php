@@ -11,7 +11,7 @@ class Article extends Model{
          * Подумайте, какие неудобства возникают при данной архитектуре класса БД
          * и класса Article
          */
-        return Db::getInstance()->fetch("SELECT a.id, a.title,a.content, a.date FROM articles a
+        return Db::getInstance()->fetch("SELECT a.id, a.title,a.content, a.date FROM article a
                     LEFT JOIN users AS u ON user_id = u.id");
     }
 
@@ -20,7 +20,7 @@ class Article extends Model{
      * @param $id
      */
     function getById($id){
-        return $this->db->fetch("SELECT a.id, a.title,a.content,u.login AS author FROM articles a
+        return $this->db->fetch("SELECT a.id, a.title,a.content,u.login AS author FROM article a
                     LEFT JOIN users AS u ON user_id = u.id
                     WHERE a.id = {$id}")[0];
     }
@@ -34,7 +34,7 @@ class Article extends Model{
      * @return bool|mysqli_result|void
      */
     function update($title,$content,$user_id,$date){
-        return $this->db->query("UPDATE articles SET title = {$title}, content = {$content}, user_id = $user_id,`date` = {$date},");
+        return $this->db->query("UPDATE article SET title = {$title}, content = {$content}, user_id = $user_id,`date` = {$date},");
     }
 
     /**
@@ -46,7 +46,7 @@ class Article extends Model{
      * @return bool|mysqli_result|void
      */
     function insert($title,$content,$user_id,$date){
-        return $this->db->query("INSERT INTO articles(title,content,user_id,`date`) VALUES({$title},{$content},{$user_id},$date)");
+        return $this->db->query("INSERT INTO article(title,content,user_id,`date`) VALUES({$title},{$content},{$user_id},$date)");
     }
 
     /**
