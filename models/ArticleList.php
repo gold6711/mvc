@@ -27,7 +27,7 @@ class ArticleList extends Model
      * Получаем список всех статей
      */
     function getAll(){
-        return $this->db->fetch("SELECT a.id, a.title,a.content, a.date FROM articles a
+        return $this->db->fetch("SELECT a.id, a.title,a.content, a.date FROM article a
                     LEFT JOIN users AS u ON user_id = u.id");
     }
 
