@@ -1,7 +1,7 @@
 <?php foreach ($articles as $article):?>
 <div>
     <h2>
-        <a href="/models/test/ttt/OOP/index.php/?c=Article&a=Display&id=<?=$article['id'] ?>">
+        <a href="/index.php?c=Article&a=Display&id=<?=$article['id'] ?>">
             <?= $article['title'];?>
         </a>
     </h2 >

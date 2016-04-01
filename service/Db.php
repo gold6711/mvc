@@ -4,7 +4,8 @@ class Db{
     protected $host = 'localhost';
     protected $login = 'root';
     protected $password = '';
-    protected $database = 'blog_2';
+    protected $database = 'blog_3';
+    protected $charset = "utf8";
 
     protected static $instance = null;
 
@@ -27,7 +28,9 @@ class Db{
                 $this->database
             );
         return $this->conn;
+
     }
+
 
     public function fetch($sql){
         try {
