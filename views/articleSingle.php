@@ -5,14 +5,14 @@
     <?=$article['content']?>
 </p>
 <div class="comments">
-    <?php foreach($comments as $comment):?>
+
     <div class="commentBlock">
         <div class="commentHeader">
-            Автор: <?= $comment['author']?> Дата: <?= $comment['author']?>
+            РђРІС‚РѕСЂ: <?= $comment['author']?> РґР°С‚Р°: <?= $comment['date']?>
         </div>
         <div class="commentBody">
             <?=$comment['content']?>
         </div>
     </div>
-    <?php endforeach ?>
+
 </div>

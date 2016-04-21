@@ -7,7 +7,7 @@ abstract class Controller
     protected $defaultLayout = 'main';
 
     protected $useLayout = true;
-    /*
+    /**
      * запуск контроллера
      */
     public function run(){

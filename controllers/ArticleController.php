@@ -1,6 +1,7 @@
 <?php
 class ArticleController extends Controller
 {
+
     public function actionIndex()
     {
        /* $model = new ArticleList(Db::getInstance());*/
@@ -12,7 +13,9 @@ class ArticleController extends Controller
     public function actionDisplay(){
         $id = $_GET['id'];
         $model = new Article(Db::getInstance());
-        var_dump($model->getById($id));
-        $this->renderTemplate('articleSingle',['article' => $model->getById($id)]);
+        //var_dump($model->getById($id));
+        //$this->renderTemplate('articleSingle',['article' => $model->getById($id)]);
+        $model->getById($id);
+        $this->render('articleSingle',['article' => $model->getById($id)]);
     }
 }
